@@ -8,7 +8,7 @@
     <section>
         <div class="section group">
             <div class="col span_1_of_3">
-            This is column 1
+            <?= "<h2>".get_the_title()."</h2>" ?>;
             </div>
             <div class="col span_1_of_3">
                 <?php
