@@ -8,6 +8,9 @@
     <section>
         <div class="section group">
             <div class="col span_1_of_3">
+
+            <h1>THIS IS A PAGE TEMPLATE
+
             <?= "<h2>".get_the_title()."</h2>" ?>;
             <?= "<h4>" . get_the_date() . "</h4>"?>;
 
@@ -58,14 +61,12 @@
                 /* This section is for categories and/or tags*/
                 echo("<section>");
 
-                    echo "Categories: ";
-                    the_category();
-                    the_tags("Look at these tags", '/');
-
                 echo("</section>");
 
                 if (have_posts()) :
                     while (have_posts()) : the_post();
+                        echo "Written by";
+                        the_author();
                         the_content();
                     endwhile;
                 endif;
