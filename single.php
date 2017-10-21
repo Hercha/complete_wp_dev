@@ -70,6 +70,8 @@
                     endwhile;
                 endif;
 
+                comments_template();
+
                  ?>
             </div>
             <div class="col span_1_of_3">
