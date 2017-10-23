@@ -2,7 +2,23 @@
 <body>
     
     <?php
+
+    $menu_args = array(
+        'theme_location'        =>  'header_menu',
+        'echo'                  =>  false,
+        'menu_id'               =>  'header_complete_theme',
+        'menu_class'            =>  'all_menus',
+        'before'                =>  '-->',
+        'after'                 =>  '|',
+        'container'             =>  'div',
+        'container_id'          =>  'header_parent',
+        'container_class'       =>  'header_menus'
+    );
+
+    $header_menu = wp_nav_menu($menu_args);
     
+    echo $header_menu;
+
     $args = array(
         'smallest'  => 10,
         'largest'   => 20,
