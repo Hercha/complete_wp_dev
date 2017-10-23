@@ -4322,3 +4322,32 @@ footer {
 	color: #FFF;
 	text-align: center;
 }
+
+.searchform input[type="submit"] {
+    background: #3399FF;
+    border: navy 2px solid;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.searchform input[type="text"] {
+    background: #DDD;
+    padding: 3px;
+    color: #555;
+    border: #999 1px solid;
+    border-radius: 5px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

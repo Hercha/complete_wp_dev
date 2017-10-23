@@ -1,5 +1,23 @@
 <?php get_header(); ?>
 <body>
+    
+    <?php
+    
+    $args = array(
+        'smallest'  => 10,
+        'largest'   => 20,
+        'unit'      => 'px',
+        'number'    => 2,
+        'format'    => 'flat',
+        'separator' => '|',
+        'order'     => 'DESC',
+        'orderby'   => 'count'
+    
+    );
+    
+    wp_tag_cloud($args);
+    
+    ?>
 
     <header>Header Content</header>
 
