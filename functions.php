@@ -69,6 +69,63 @@ function initiate_customizer($wp_customize) {
         'transport'     =>  'refresh',
     ));
     
+    /* GOOGLE MAPS ON THE CUSTOMIZER */
+    
+    $wp_customize->add_section('google_map_section', array(
+        'title'         =>  __('Google Map Settings', 'completewp')
+    ));
+    
+    /* SPECIALS OF THE DAY */
+    
+    $wp_customize->add_section('restaurant_settings', array(
+        'title'         =>  __('Restaurant Settings', 'completewp'),
+        'priority'      =>  10,
+    ));
+    
+    $food_choices = array(
+        'Pizza'         =>  'Pizza',
+        'Burger'        =>  'Burgers',
+        'Tikka'         =>  'Tikka Chicken',
+        'Sushi'         =>  'Sushi',
+        'Surritos'      =>  'Burritos',
+    );
+    
+    $wp_customize->add_setting('food_choice', array(
+        'default'       =>  'Pizza',
+        'transport'     =>  'refresh',
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'specials_food_radio', array(
+        'label'         =>  __('Todays Specials Of The Day', 'completewp'),
+        'section'       =>  'restaurant_settings',
+        'settings'      =>  'food_choice',
+        'type'          =>  'radio',
+        'choices'       =>  $food_choices
+    )));
+    
+    /* SPECIAL OF THE DAY COLORS */
+    
+    $color_choices = array(
+        'red'       =>  'Red',
+        'purple'    =>  'Purple',
+        '#000'      =>  'Black'
+    );
+    
+    $wp_customize->add_setting('specials_color', array(
+        'default'       =>  '#000000',
+        'transport'     =>  'refresh',
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'specials_color_radio', array(
+        'label'         =>  __('Color For The Specials Of The Day', 'completewp'),
+        'section'       =>  'colors',
+        'settings'      =>  'specials_color',
+        'type'          =>  'radio',
+        'choices'       =>  $color_choices
+    )));
+    
+    /* SPECIALS OF THE DAY END */
+    
 //    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'main_text_color_control', array(
 //        'label'         =>  __('Main Text Color', 'completewp'),
 //        'section'       =>  'colors',
