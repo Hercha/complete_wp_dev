@@ -4323,6 +4323,43 @@ footer {
 	text-align: center;
 }
 
+#footer-menu a {
+    color: #FFF;
+    font-family: arial;
+    font-size: 9pt;
+}
+
+#footer-menu li {
+    display: inline;
+}
+
+#left-sidebar-menu {
+    position: relative;
+}
+
+#left-sidebar-menu li {
+    border-bottom: 2px solid #005500;
+    padding: 5px 0px;
+    list-style: none;
+}
+
+#left-sidebar-menu a {
+    color: #090;
+    font-family: arial;
+    font-size: 10pt;
+}
+
+.sub-menu li {
+    display: none;
+    background-color: #CFC;
+    height: 100px;
+    width: 300px;
+    z-index: 10;
+    position: absolute;
+    top: 5px;
+    left: 120px;
+}
+
 .searchform input[type="submit"] {
     background: #3399FF;
     border: navy 2px solid;
